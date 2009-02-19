@@ -1,0 +1,27 @@
+<Project name="API_HL_Haifa" fileversion="2.0" language="C#" DefaultNamespace="API_HL_HAIFA" targetFramework="2.0" ctype="DotNetProject">
+  <Configurations active="">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Debug/" assembly="API_HL_HAIFA" />
+      <Build debugmode="True" target="Library" />
+      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Release/" assembly="API_HL_HAIFA" />
+      <Build debugmode="False" target="Library" />
+      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File name="API_HL_Haifa.cs" subtype="Code" buildaction="Compile" resource_id="API_HL_HAIFA.API_HL_Haifa.cs" />
+    <File name="AssemblyInfo.cs" subtype="Code" buildaction="Compile" resource_id="API_HL_HAIFA.AssemblyInfo.cs" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Project" localcopy="True" refto="Miner_Highlearn_API" />
+    <ProjectReference type="Project" localcopy="True" refto="My_HTTP" />
+  </References>
+</Project>

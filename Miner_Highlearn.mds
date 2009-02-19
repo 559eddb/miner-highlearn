@@ -1,0 +1,24 @@
+<Combine name="Miner_Highlearn" fileversion="2.0">
+  <Policies />
+  <Configurations />
+  <StartMode startupentry="API_HL_Haifa" single="True">
+    <Execute type="None" entry="API_HL_Haifa" />
+    <Execute type="None" entry="My_HTTP" />
+    <Execute type="None" entry="Miner_Highlearn_API" />
+    <Execute type="None" entry="API_HL_HUJI" />
+    <Execute type="None" entry="API_HL_TAU" />
+    <Execute type="None" entry="Miner_Highlearn_GUI" />
+    <Execute type="None" entry="API_HL_BIU" />
+    <Execute type="None" entry="API_HL_BGU" />
+  </StartMode>
+  <Entries>
+    <Entry filename="API_HL_HAIFA/API_HL_Haifa.mdp" />
+    <Entry filename="My_HTTP/My_HTTP.mdp" />
+    <Entry filename="Miner_Highlearn_API/Miner_Highlearn_API.mdp" />
+    <Entry filename="API_HL_HUJI/API_HL_HUJI.mdp" />
+    <Entry filename="API_HL_TAU/API_HL_TAU.mdp" />
+    <Entry filename="Miner_Highlearn_GUI/Miner_Highlearn_GUI.mdp" />
+    <Entry filename="API_HL_BIU/API_HL_BIU.mdp" />
+    <Entry filename="API_HL_BGU/API_HL_BGU.mdp" />
+  </Entries>
+</Combine>
