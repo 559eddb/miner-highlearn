@@ -48,7 +48,7 @@ namespace Miner_Highlearn
 		private 	CheckBox		btn_Log;
 		private 	GroupBox		groupBox2;
 		private 	Label			label6;
-		private		AxSHDocVw.AxWebBrowser axWebBrowser1;
+//		private		AxSHDocVw.AxWebBrowser axWebBrowser1;
 		private 	Panel			pnl_Browser;
 
 		public void Initialize() {
@@ -149,13 +149,11 @@ namespace Miner_Highlearn
 			this.edt_Progress_Course = new System.Windows.Forms.TextBox();
 			this.prg_Courses = new System.Windows.Forms.ProgressBar();
 			this.pnl_Browser = new System.Windows.Forms.Panel();
-			this.axWebBrowser1 = new AxSHDocVw.AxWebBrowser();
 			this.edt_Log = new System.Windows.Forms.RichTextBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.edt_Verbose_Level)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.pnl_Browser.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.axWebBrowser1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -432,23 +430,11 @@ namespace Miner_Highlearn
 				| System.Windows.Forms.AnchorStyles.Left) 
 				| System.Windows.Forms.AnchorStyles.Right)));
 			this.pnl_Browser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.pnl_Browser.Controls.Add(this.axWebBrowser1);
 			this.pnl_Browser.Controls.Add(this.edt_Log);
 			this.pnl_Browser.Location = new System.Drawing.Point(-2, 203);
 			this.pnl_Browser.Name = "pnl_Browser";
 			this.pnl_Browser.Size = new System.Drawing.Size(616, 271);
 			this.pnl_Browser.TabIndex = 14;
-			// 
-			// axWebBrowser1
-			// 
-			this.axWebBrowser1.ContainingControl = this;
-			this.axWebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.axWebBrowser1.Enabled = true;
-			this.axWebBrowser1.Location = new System.Drawing.Point(0, 0);
-			this.axWebBrowser1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWebBrowser1.OcxState")));
-			this.axWebBrowser1.Size = new System.Drawing.Size(612, 267);
-			this.axWebBrowser1.TabIndex = 17;
-			this.axWebBrowser1.TabStop = false;
 			// 
 			// edt_Log
 			// 
@@ -484,12 +470,12 @@ namespace Miner_Highlearn
 			this.Font = new System.Drawing.Font("Tahoma", 8F);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
-			this.MaximumSize = new System.Drawing.Size(620, 2000);
+			this.MaximumSize = new System.Drawing.Size(768, 2000);
 			this.MinimumSize = new System.Drawing.Size(620, 240);
 			this.Name = "frm_Main";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Miner Highlearn";
+			this.Text = "Miner Highlearn - TEST - PRIVATE";
 			this.Closing += new System.ComponentModel.CancelEventHandler(this.frm_Main_Closing);
 			this.Load += new System.EventHandler(this.frm_Main_Load);
 			this.Closed += new System.EventHandler(this.frm_Main_Closed);
@@ -497,7 +483,6 @@ namespace Miner_Highlearn
 			((System.ComponentModel.ISupportInitialize)(this.edt_Verbose_Level)).EndInit();
 			this.groupBox2.ResumeLayout(false);
 			this.pnl_Browser.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.axWebBrowser1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -642,10 +627,10 @@ namespace Miner_Highlearn
 				Config_Load("Data/user_settings.dat");
 			}
 
-			btn_Log.Checked = false;
+			btn_Log.Checked = true;
 			btn_Log_Click(sender, null);
 
-			axWebBrowser1.Navigate("http://www.RedPill.co.cc/fusion/dataminer_highlearn_client.php");
+//			axWebBrowser1.Navigate("http://www.RedPill.co.cc/fusion/dataminer_highlearn_client.php");
 
 			Version ver = new Version(Application.ProductVersion);
 			this.Text += " - Ver: " + 
@@ -660,7 +645,7 @@ namespace Miner_Highlearn
 		private void btn_Log_Click(object sender, System.EventArgs e) {
 			if(!btn_Log.Checked) {
 				btn_Log				.Text		= "Log";
-				axWebBrowser1		.Visible	= !btn_Log.Checked;
+//				axWebBrowser1		.Visible	= !btn_Log.Checked;
 				edt_Log				.Visible	= btn_Log.Checked;
 				lbl_Verbose			.Visible	= btn_Log.Checked;
 				edt_Verbose_Level	.Visible	= btn_Log.Checked;
@@ -669,7 +654,7 @@ namespace Miner_Highlearn
 //				this.Height				-= edt_Log.Height;
 			} else {
 				btn_Log				.Text		= "Updates";
-				axWebBrowser1		.Visible	= !btn_Log.Checked;
+//				axWebBrowser1		.Visible	= !btn_Log.Checked;
 				edt_Log				.Visible	= btn_Log.Checked;
 				lbl_Verbose			.Visible	= btn_Log.Checked;
 				edt_Verbose_Level	.Visible	= btn_Log.Checked;
