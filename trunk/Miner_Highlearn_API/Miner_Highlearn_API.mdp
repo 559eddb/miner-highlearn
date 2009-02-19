@@ -1,0 +1,34 @@
+<Project name="Miner_Highlearn_API" fileversion="2.0" language="C#" DefaultNamespace="Miner_Highlearn_API" targetFramework="2.0" ctype="DotNetProject">
+  <Configurations active="">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Debug/" assembly="Miner_Highlearn" />
+      <Build debugmode="True" target="Library" />
+      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Release/" assembly="Miner_Highlearn" />
+      <Build debugmode="False" target="Library" />
+      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File name="API_Highlearn.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_API.API_Highlearn.cs" />
+    <File name="App.ico" subtype="Code" buildaction="Exclude" resource_id="Miner_Highlearn_API.App.ico" />
+    <File name="AssemblyInfo.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_API.AssemblyInfo.cs" />
+    <File name="frm_Select_Courses.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_API.frm_Select_Courses.cs" />
+    <File name="frm_Select_Courses.resx" subtype="Code" buildaction="EmbedAsResource" dependson="/home/guy/Desktop/miner-highlearn/Miner_Highlearn_API/frm_Select_Courses.cs" resource_id="Miner_Highlearn_API.frm_Select_Courses.resources" />
+    <File name="frm_Select_Courses_Tree.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_API.frm_Select_Courses_Tree.cs" />
+    <File name="frm_Select_Courses_Tree.resx" subtype="Code" buildaction="EmbedAsResource" dependson="/home/guy/Desktop/miner-highlearn/Miner_Highlearn_API/frm_Select_Courses_Tree.cs" resource_id="Miner_Highlearn_API.frm_Select_Courses_Tree.resources" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <ProjectReference type="Project" localcopy="True" refto="My_HTTP" />
+  </References>
+</Project>

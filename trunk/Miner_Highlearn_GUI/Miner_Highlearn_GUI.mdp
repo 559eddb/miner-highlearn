@@ -1,0 +1,42 @@
+<Project name="Miner_Highlearn_GUI" fileversion="2.0" language="C#" DefaultNamespace="Miner_Highlearn_GUI" targetFramework="2.0" ctype="DotNetProject">
+  <Configurations active="">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Debug/" assembly="Miner_Highlearn_GUI" />
+      <Build debugmode="True" target="WinExe" />
+      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
+      <EnvironmentVariables />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Release/" assembly="Miner_Highlearn_GUI" />
+      <Build debugmode="False" target="WinExe" />
+      <Execution runwithwarnings="False" consolepause="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File name="App.ico" subtype="Code" buildaction="Exclude" resource_id="Miner_Highlearn_GUI.App.ico" />
+    <File name="AssemblyInfo.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_GUI.AssemblyInfo.cs" />
+    <File name="Executer.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_GUI.Executer.cs" />
+    <File name="frm_About.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_GUI.frm_About.cs" />
+    <File name="frm_About.resx" subtype="Code" buildaction="EmbedAsResource" dependson="/home/guy/Desktop/miner-highlearn/Miner_Highlearn_GUI/frm_About.cs" resource_id="Miner_Highlearn_GUI.frm_About.resources" />
+    <File name="frm_Main.cs" subtype="Code" buildaction="Compile" resource_id="Miner_Highlearn_GUI.frm_Main.cs" />
+    <File name="frm_Main.resx" subtype="Code" buildaction="EmbedAsResource" dependson="/home/guy/Desktop/miner-highlearn/Miner_Highlearn_GUI/frm_Main.cs" resource_id="Miner_Highlearn_GUI.frm_Main.resources" />
+    <File name="Miner_Highlearn.frm_About.resources" subtype="Code" buildaction="EmbedAsResource" />
+    <File name="Miner_Highlearn.frm_Main.resources" subtype="Code" buildaction="EmbedAsResource" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Project" localcopy="True" refto="Miner_Highlearn_API" />
+    <ProjectReference type="Project" localcopy="True" refto="My_HTTP" />
+    <ProjectReference type="Project" localcopy="True" refto="API_HL_TAU" />
+    <ProjectReference type="Project" localcopy="True" refto="API_HL_BIU" />
+    <ProjectReference type="Project" localcopy="True" refto="API_HL_BGU" />
+    <ProjectReference type="Project" localcopy="True" refto="API_HL_HUJI" />
+    <ProjectReference type="Project" localcopy="True" refto="API_HL_Haifa" />
+  </References>
+</Project>
