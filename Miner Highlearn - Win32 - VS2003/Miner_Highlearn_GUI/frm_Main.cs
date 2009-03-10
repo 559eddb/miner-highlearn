@@ -633,7 +633,7 @@ namespace Miner_Highlearn
 											  TMy_University.BIU),
 //											  new TMy_Item_University(	"Haifa   - virtualnew.haifa.ac.il",
 //											  TMy_University.Haifa),
-											  new TMy_Item_University(	"Colman College   - portal.colman.ac.il",
+											  new TMy_Item_University(	"The College of Management   - portal.colman.ac.il",
 											  TMy_University.Colman),
 			});
 			cmb_Institute.SelectedIndex = 0;
