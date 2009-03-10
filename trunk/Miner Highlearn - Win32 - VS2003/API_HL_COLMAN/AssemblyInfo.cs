@@ -6,15 +6,14 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("API HighLearn - Bar Ilan University")]
+[assembly: AssemblyTitle("API HighLearn - Tel Aviv University")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The Red Pill")]
 [assembly: AssemblyProduct("Miner_Highlearn")]
 [assembly: AssemblyCopyright("Willy Fenchenko - Wolf1986")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]		
-
+[assembly: AssemblyCulture("")]	
 
 //
 // Version information for an assembly consists of the following four values:
@@ -27,7 +26,7 @@ using System.Runtime.CompilerServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.0.0.135")]
+[assembly: AssemblyVersion("1.0.0.12")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 

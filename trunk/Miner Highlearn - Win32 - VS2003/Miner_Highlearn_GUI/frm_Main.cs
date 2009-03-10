@@ -71,6 +71,9 @@ namespace Miner_Highlearn
 				case TMy_University.Haifa:
 					hl.core						= (API_Highlearn) new API_HL_Haifa();
 					break;
+				case TMy_University.Colman:
+					hl.core						= (API_Highlearn) new API_HL_Colman();
+					break;
 			}
 
 			hl.core.logger				= new Logger();
@@ -620,16 +623,18 @@ namespace Miner_Highlearn
 
 			cmb_Institute.Items.AddRange(
 				new TMy_Item_University[] {
-											  new TMy_Item_University(	"Tel Aviv University\t- virtual.tau.ac.il",
+											  new TMy_Item_University(	"Tel Aviv University   - virtual.tau.ac.il",
 											  TMy_University.TAU),
-											  new TMy_Item_University(	"Ben Gurion University\t- hl2.bgu.ac.il",
+											  new TMy_Item_University(	"Ben Gurion University   - hl2.bgu.ac.il",
 											  TMy_University.BGU),
-											  new TMy_Item_University(	"Hebrew University of Jerusalem\t- owl.huji.ac.il",
+											  new TMy_Item_University(	"Hebrew University of Jerusalem   - owl.huji.ac.il",
 											  TMy_University.HUJI),
-											  new TMy_Item_University(	"Bar Ilan University\t- hl2.biu.ac.il",
+											  new TMy_Item_University(	"Bar Ilan University   - hl2.biu.ac.il",
 											  TMy_University.BIU),
-											  new TMy_Item_University(	"Haifa\t- virtualnew.haifa.ac.il",
-											  TMy_University.Haifa),
+//											  new TMy_Item_University(	"Haifa   - virtualnew.haifa.ac.il",
+//											  TMy_University.Haifa),
+											  new TMy_Item_University(	"Colman College   - portal.colman.ac.il",
+											  TMy_University.Colman),
 			});
 			cmb_Institute.SelectedIndex = 0;
 
@@ -678,7 +683,7 @@ namespace Miner_Highlearn
 			}
 		}
 
-		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa};
+		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman};
 
 		public	class	TMy_Item_University {
 			public	string				title;
