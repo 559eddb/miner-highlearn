@@ -631,8 +631,8 @@ namespace Miner_Highlearn
 											  TMy_University.HUJI),
 											  new TMy_Item_University(	"Bar Ilan University   - hl2.biu.ac.il",
 											  TMy_University.BIU),
-//											  new TMy_Item_University(	"Haifa   - virtualnew.haifa.ac.il",
-//											  TMy_University.Haifa),
+											  new TMy_Item_University(	"Haifa   - virtualnew.haifa.ac.il",
+											  TMy_University.Haifa),
 											  new TMy_Item_University(	"The College of Management   - portal.colman.ac.il",
 											  TMy_University.Colman),
 			});

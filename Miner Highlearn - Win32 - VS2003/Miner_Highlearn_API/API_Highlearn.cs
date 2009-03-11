@@ -176,6 +176,7 @@ namespace Miner_Highlearn{
 									"password"			, password
 								}
 				);
+
 			// Check wether login was successful
 			if(response_str.IndexOf("../bareket/KBaseTop.asp") == -1)
 				throw(new Exception("Unsuccessful login, Check Usernamne and Password"));
