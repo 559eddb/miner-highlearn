@@ -521,6 +521,8 @@ namespace Miner_Highlearn
 
 			btn_Abort.Enabled = false;
 			btn_Start.Enabled = true;
+
+			edt_Verbose_Level.Enabled = btn_Abort.Enabled;
 		}
 
 		public	void Config_Save_UI() {
@@ -548,6 +550,8 @@ namespace Miner_Highlearn
 			
 			btn_Abort.Enabled = true;
 			btn_Start.Enabled = false;
+
+			edt_Verbose_Level.Enabled = btn_Abort.Enabled;
 
 			// Reset Progress GUI
 				edt_Progress_Course.Text	= "";
@@ -580,6 +584,8 @@ namespace Miner_Highlearn
 			}
 			btn_Abort.Enabled = false;
 			btn_Start.Enabled = true;
+
+			edt_Verbose_Level.Enabled = btn_Abort.Enabled;
 		}
 
 		public void Config_Save(string filename) {
@@ -656,6 +662,8 @@ namespace Miner_Highlearn
 			this.Text += " - Ver: " + 
 					ver.Major + "." + ver.Minor + "." + ver.Build + 
 					" Build " + ver.Revision;
+
+			edt_Verbose_Level.Enabled = btn_Abort.Enabled;
 		}
 
 		private void edt_Verbose_Level_ValueChanged(object sender, System.EventArgs e) {
