@@ -145,6 +145,11 @@
                     Project = "{541F0EE3-94A9-475B-BC2F-551A905BF9F3}"
                     Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
                 />
+                <Reference
+                    Name = "API_HL_HIT"
+                    Project = "{66AD2DB7-475A-49B7-85AA-076C6A7FF358}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
             </References>
         </Build>
         <Files>

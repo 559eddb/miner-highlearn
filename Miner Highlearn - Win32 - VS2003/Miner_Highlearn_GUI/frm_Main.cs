@@ -74,6 +74,9 @@ namespace Miner_Highlearn
 				case TMy_University.Colman:
 					hl.core						= (API_Highlearn) new API_HL_Colman();
 					break;
+				case TMy_University.HIT:
+					hl.core						= (API_Highlearn) new API_HL_HIT();
+					break;
 			}
 
 			hl.core.logger				= new Logger();
@@ -641,6 +644,8 @@ namespace Miner_Highlearn
 											  TMy_University.Haifa),
 											  new TMy_Item_University(	"The College of Management   - portal.colman.ac.il",
 											  TMy_University.Colman),
+											  new TMy_Item_University(	"Holon Institute of Technology   - hl.hit.ac.il",
+											  TMy_University.HIT),
 			});
 			cmb_Institute.SelectedIndex = 0;
 
@@ -691,7 +696,7 @@ namespace Miner_Highlearn
 			}
 		}
 
-		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman};
+		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman, HIT};
 
 		public	class	TMy_Item_University {
 			public	string				title;

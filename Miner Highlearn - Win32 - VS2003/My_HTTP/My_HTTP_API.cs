@@ -143,10 +143,9 @@ namespace My_HTTP
 					headers["location"].IndexOf("https://") != 0 &&
 					headers["location"].IndexOf("/") != 0 ) {
 					
-					tmp_str		=	Path.GetDirectoryName(http_request.Address.AbsolutePath).Replace("\\","/") + 
-									"/" + 
-									Path.GetFileName(new Uri("http://a.b.c/"+headers["location"]).AbsolutePath) + 
-									new Uri("http://a.b.c/"+headers["location"]).Query;
+					tmp_str		=	Path.GetDirectoryName(http_request.Address.AbsolutePath).Replace("\\","/");
+					tmp_str		+=	"/" + Path.GetFileName(new Uri("http://a.b.c/"+headers["location"]).AbsolutePath);
+					tmp_str		+=	new Uri("http://a.b.c/"+headers["location"]).Query;
 				}
 
 				Init_HttpWebRequest(Init_Path(http_request.Address.Scheme + "://" + http_request.Address.Host,tmp_str));

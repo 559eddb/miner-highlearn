@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_Colman", "API_HL_COL
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_HIT", "API_HL_HIT\API_HL_HIT.csproj", "{66AD2DB7-475A-49B7-85AA-076C6A7FF358}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
@@ -89,6 +93,10 @@ Global
 		{541F0EE3-94A9-475B-BC2F-551A905BF9F3}.Debug.Build.0 = Debug|.NET
 		{541F0EE3-94A9-475B-BC2F-551A905BF9F3}.Release.ActiveCfg = Release|.NET
 		{541F0EE3-94A9-475B-BC2F-551A905BF9F3}.Release.Build.0 = Release|.NET
+		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Debug.ActiveCfg = Debug|.NET
+		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Debug.Build.0 = Debug|.NET
+		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Release.ActiveCfg = Release|.NET
+		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Release.Build.0 = Release|.NET
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
