@@ -51,6 +51,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_HIT", "API_HL_HIT\AP
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_Sapir", "API_HL_Sapir\API_HL_Sapir.csproj", "{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
@@ -97,6 +101,10 @@ Global
 		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Debug.Build.0 = Debug|.NET
 		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Release.ActiveCfg = Release|.NET
 		{66AD2DB7-475A-49B7-85AA-076C6A7FF358}.Release.Build.0 = Release|.NET
+		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Debug.ActiveCfg = Debug|.NET
+		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Debug.Build.0 = Debug|.NET
+		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Release.ActiveCfg = Release|.NET
+		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Release.Build.0 = Release|.NET
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
