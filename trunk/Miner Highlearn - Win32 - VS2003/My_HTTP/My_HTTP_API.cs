@@ -23,7 +23,10 @@ namespace My_HTTP
 		protected		HttpWebRequest		http_request;
 		protected		HttpWebResponse		http_response;
 		protected		CookieCollection	Session_Cookies;
+
+		public			string				server_protocol;
 		public			string				server_prefix;
+
 		public			string				response_str;
 
 		public			Encoding			encoding_post;
@@ -48,7 +51,8 @@ namespace My_HTTP
 		}
 
 		public API_HTTP(string server):this() {	
-			server_prefix = server;
+			server_prefix	= server;
+			server_protocol	= "http://";
 		}
 
 		public		string	str_Left(string str, int count) {
@@ -84,7 +88,7 @@ namespace My_HTTP
 		}		
 
 		protected	string	Init_Path(string m_path) {	
-			return Init_Path("http://" + server_prefix, m_path);
+			return Init_Path(server_protocol + server_prefix, m_path);
 		}
 
 		protected	string	Init_Path(string server, string m_path) {	
@@ -324,7 +328,7 @@ namespace My_HTTP
 		}
 
 		public	string		POST(string path, string[] vars) {
-			return POST("http://" + server_prefix,path, vars, true);
+			return POST(server_protocol + server_prefix,path, vars, true);
 		}
 
 		public	string		POST(string server, string path, string[] vars, bool report) {

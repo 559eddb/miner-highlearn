@@ -43,10 +43,10 @@ namespace Miner_Highlearn{
 			public	ArrayList				v_items_skipped;
 			public	ArrayList				vars_post;
 
-			public			string			regex_parse_item_names;
-			public			string			regex_parse_item_paths;
-			public			string			regex_parse_item_additional_details;
-			public			string			link_global_login;
+			public	string					regex_parse_item_names;
+			public	string					regex_parse_item_paths;
+			public	string					regex_parse_item_additional_details;
+			public	string					link_global_login;
 	
 		// Methods
 		public						API_Highlearn(string server) : base(server) {
@@ -448,11 +448,12 @@ namespace Miner_Highlearn{
 			//		$got = preg_match("/VcCourseID=(\\d*)/sim", $link, $matches);
 			//			$this->v_item_course_id	[$index_item] = $matches[1];
 
-			string	server_prefix_dotted = server_prefix.Replace(".","\\.");
+			string	server_prefix_dotted	= server_prefix.Replace(".","\\.");
+			string	protocol				= server_protocol.TrimEnd(new char [] {':','/'});
 					
 			// Parse link to the item
 			try {
-				reg_match(	@"(ReDirectWord\.asp\?WordFile=http:\/\/" + server_prefix_dotted + @"\/upload[^\r\n]*[^\/])[' \""][\s]*[\r\n]*",
+				reg_match(	@"(ReDirectWord\.asp\?WordFile="+protocol+@":\/\/" + server_prefix_dotted + @"\/upload[^\r\n]*[^\/])[' \""][\s]*[\r\n]*",
 					"",
 					RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
 					out link);
@@ -466,13 +467,13 @@ namespace Miner_Highlearn{
 							RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
 							out tmp_link1);
 				tmp_link1 	= link_make_legal(tmp_link1);
-				reg_match(	@"<FRAME .*? SRC=""(http.*?)"">",
+				reg_match(	@"<FRAME .*? SRC=""("+protocol+@".*?)"">",
 							"IGNORE",
 							RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
 							out link);
 
 			} catch {
-				reg_match(	@"([\'\""])http:\/\/"+ server_prefix_dotted +@"\/(upload.*?)\1",
+				reg_match(	@"([\'\""])"+protocol+@":\/\/"+ server_prefix_dotted +@"\/(upload.*?)\1",
 					"IGNORE",
 					RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
 					2,
@@ -509,6 +510,8 @@ namespace Miner_Highlearn{
 					tmp_link2	= link_download_cleanup2;
 			int		index_item	= current_index_item;
 
+			string	protocol	= server_protocol.TrimEnd(new char [] {':','/'});
+
 			// PARSE LINK AND DOWNLOAD THE FILE
 			Uri		tmp_uri			= new Uri(Init_Path(link));
 			string	www_file_name	= Path.GetFileName(tmp_uri.AbsolutePath),
@@ -523,7 +526,7 @@ namespace Miner_Highlearn{
 			path	= path_make_legal(path);
 
 			link	= link.Replace("\\", "/");
-			link	= link.Replace("http://" + server_prefix + "/", "");
+			link	= link.Replace(protocol+"://" + server_prefix + "/", "");
 
 			if(!Directory.Exists(path))
 				Directory.CreateDirectory(path);

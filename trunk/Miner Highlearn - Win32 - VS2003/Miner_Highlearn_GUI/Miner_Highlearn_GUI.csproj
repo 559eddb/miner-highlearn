@@ -150,6 +150,11 @@
                     Project = "{66AD2DB7-475A-49B7-85AA-076C6A7FF358}"
                     Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
                 />
+                <Reference
+                    Name = "API_HL_Sapir"
+                    Project = "{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
             </References>
         </Build>
         <Files>
