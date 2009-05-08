@@ -155,6 +155,16 @@
                     Project = "{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}"
                     Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
                 />
+                <Reference
+                    Name = "API_HL_CET"
+                    Project = "{D6A37442-BD9B-40DD-B5E2-1F89EE0C6661}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "API_HL_Afeka"
+                    Project = "{B716AC3B-0370-4C40-AA2A-C45E77091A6D}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
             </References>
         </Build>
         <Files>

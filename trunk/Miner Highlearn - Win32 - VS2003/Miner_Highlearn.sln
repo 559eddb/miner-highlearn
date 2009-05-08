@@ -55,6 +55,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_Sapir", "API_HL_Sapi
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_CET", "API_HL_CET\API_HL_CET.csproj", "{D6A37442-BD9B-40DD-B5E2-1F89EE0C6661}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_Afeka", "API_HL_Afeka\API_HL_Afeka.csproj", "{B716AC3B-0370-4C40-AA2A-C45E77091A6D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
@@ -105,6 +113,14 @@ Global
 		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Debug.Build.0 = Debug|.NET
 		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Release.ActiveCfg = Release|.NET
 		{1D34CB93-E41B-4C79-A647-D5A63C30D2F5}.Release.Build.0 = Release|.NET
+		{D6A37442-BD9B-40DD-B5E2-1F89EE0C6661}.Debug.ActiveCfg = Debug|.NET
+		{D6A37442-BD9B-40DD-B5E2-1F89EE0C6661}.Debug.Build.0 = Debug|.NET
+		{D6A37442-BD9B-40DD-B5E2-1F89EE0C6661}.Release.ActiveCfg = Release|.NET
+		{D6A37442-BD9B-40DD-B5E2-1F89EE0C6661}.Release.Build.0 = Release|.NET
+		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Debug.ActiveCfg = Debug|.NET
+		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Debug.Build.0 = Debug|.NET
+		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Release.ActiveCfg = Release|.NET
+		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Release.Build.0 = Release|.NET
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
