@@ -80,6 +80,12 @@ namespace Miner_Highlearn
 				case TMy_University.Sapir:
 					hl.core						= (API_Highlearn) new API_HL_Sapir();
 					break;
+				case TMy_University.CET:
+					hl.core						= (API_Highlearn) new API_HL_CET();
+					break;
+				case TMy_University.Afeka:
+					hl.core						= (API_Highlearn) new API_HL_Afeka();
+					break;
 			}
 
 			hl.core.logger				= new Logger();
@@ -651,6 +657,10 @@ namespace Miner_Highlearn
 											  TMy_University.HIT),
 											  new TMy_Item_University(	"Sapir College   - learn.sapir.ac.il",
 											  TMy_University.Sapir),
+											  new TMy_Item_University(	"CET [Matah]   - highlearn2002.cet.ac.il",
+											  TMy_University.CET),
+											  new TMy_Item_University(	"Afeka College    - highlearn.afeka.ac.il",
+											  TMy_University.Afeka),
 			});
 			cmb_Institute.SelectedIndex = 0;
 
@@ -701,7 +711,7 @@ namespace Miner_Highlearn
 			}
 		}
 
-		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman, HIT, Sapir};
+		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman, HIT, Sapir, CET, Afeka};
 
 		public	class	TMy_Item_University {
 			public	string				title;

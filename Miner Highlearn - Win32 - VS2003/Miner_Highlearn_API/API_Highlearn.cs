@@ -46,7 +46,9 @@ namespace Miner_Highlearn{
 			public	string					regex_parse_item_names;
 			public	string					regex_parse_item_paths;
 			public	string					regex_parse_item_additional_details;
+			
 			public	string					link_global_login;
+			public	Encoding				global_custom_get_course_items_encoding;
 	
 		// Methods
 		public						API_Highlearn(string server) : base(server) {
@@ -62,7 +64,9 @@ namespace Miner_Highlearn{
 			regex_parse_item_names					= ";\">([^<]*)</a></span><span style=\"width:15\"></span><span align=\"right\" class=\"Table_Content_Main_Item\"";
 			regex_parse_item_paths					= "\\s+<span style=\"font-weight:bold\" title=\"([^>]*)\">";
 			regex_parse_item_additional_details		= @"onclick=""cmdItemOpen\(myrnd,\'([^\']*)\',\'([^\']*)\',\'([^\']*)\',\'[^\']*\',\'[^\']*\',\'([^\']*)\',[^\)]*";
+			
 			link_global_login						= "";
+			global_custom_get_course_items_encoding = Encoding.GetEncoding(1255);
 		}
 		public	virtual	string		link_make_legal(string link) {
 			return link_make_legal(link, true);
@@ -260,7 +264,7 @@ namespace Miner_Highlearn{
 					string	link			= "/BareketNet/ItemMenu.aspx?caller=search&handler=EditHandler&sphrase="+__SEARCH_PHRASE__+"&swords=&scontent=false&sfromdate=&stodate=&sitemtype=&sclienttype=&sfields=&scourse="+__COURSE_GUID__+"&ssubject=&senvirotype=&spermission=&KBItemID=&KBItemLetter=&TestID=&sQuestionStatus=&LinkBoardSID=";
 
 					Encoding encoding_old	= encoding_get;
-					encoding_get			= Encoding.GetEncoding(1255);
+					encoding_get			= global_custom_get_course_items_encoding;
 						GET(link);
 					encoding_get			= encoding_old;
 
@@ -271,7 +275,7 @@ namespace Miner_Highlearn{
 				if(int.Parse(match) >= 1)	more_results = true;
 			} else {
 				Encoding encoding_old	= encoding_get;
-				encoding_get			= Encoding.GetEncoding(1255);
+				encoding_get			= global_custom_get_course_items_encoding;
 					POST(given_link_next_page, (string[])this.vars_post.ToArray(typeof(string)));
 				encoding_get			= encoding_old;
 			}
@@ -336,6 +340,14 @@ namespace Miner_Highlearn{
 						RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
 						out match);
 					link_next_page = "/BareketNet/" + HttpUtility.HtmlDecode(match);
+
+					if( 1==reg_match(	"<input type=\"hidden\" name=\"__EVENTVALIDATION\" .*?value=\"(.*?)\"",
+							"IGNORE",
+							RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
+							out match) ) {
+						vars_post.Add("__EVENTVALIDATION");
+						vars_post.Add(match);
+					}
 				}
 				else link_next_page = "";
 			} catch(Exception e) {	
@@ -436,9 +448,9 @@ namespace Miner_Highlearn{
 							out link);
 				link = "/bareket/" + link;
 
-				Encoding encoding_old	= encoding_get;
-				encoding_get			= Encoding.GetEncoding(1255);
-				GET(link);
+				Encoding encoding_old	= Encoding.GetEncoding(1255);
+				encoding_get			= encoding_old;
+					GET(link);
 				encoding_get			= encoding_old;
 
 			} catch{}
@@ -505,6 +517,7 @@ namespace Miner_Highlearn{
 		public	virtual	void		Download_Course_Item_Requested(bool headers_only) {
 			logger.Log_Method();
 			logger.Step_In();
+
 			string	link		= link_download,
 					tmp_link1	= link_download_cleanup1,
 					tmp_link2	= link_download_cleanup2;
