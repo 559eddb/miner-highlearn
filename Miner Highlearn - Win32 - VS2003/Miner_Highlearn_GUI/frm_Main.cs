@@ -86,6 +86,9 @@ namespace Miner_Highlearn
 				case TMy_University.Afeka:
 					hl.core						= (API_Highlearn) new API_HL_Afeka();
 					break;
+				case TMy_University.SCE:
+					hl.core						= (API_Highlearn) new API_HL_SCE();
+					break;
 			}
 
 			hl.core.logger				= new Logger();
@@ -661,6 +664,8 @@ namespace Miner_Highlearn
 											  TMy_University.CET),
 											  new TMy_Item_University(	"Afeka College    - highlearn.afeka.ac.il",
 											  TMy_University.Afeka),
+											  new TMy_Item_University(	"Sami Shamoon College - elearn.sce.ac.il",
+											  TMy_University.SCE),
 			});
 			cmb_Institute.SelectedIndex = 0;
 
@@ -711,7 +716,7 @@ namespace Miner_Highlearn
 			}
 		}
 
-		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman, HIT, Sapir, CET, Afeka};
+		public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman, HIT, Sapir, CET, Afeka, SCE};
 
 		public	class	TMy_Item_University {
 			public	string				title;

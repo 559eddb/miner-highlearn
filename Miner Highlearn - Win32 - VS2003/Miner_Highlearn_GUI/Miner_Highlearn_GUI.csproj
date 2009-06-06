@@ -165,6 +165,11 @@
                     Project = "{B716AC3B-0370-4C40-AA2A-C45E77091A6D}"
                     Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
                 />
+                <Reference
+                    Name = "API_HL_SCE"
+                    Project = "{D0894967-E3A6-40F7-91BF-3F5484CA790A}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
             </References>
         </Build>
         <Files>
