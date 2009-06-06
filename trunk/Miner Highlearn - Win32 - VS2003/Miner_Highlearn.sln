@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_Afeka", "API_HL_Afek
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_HL_SCE", "API_HL_SCE\API_HL_SCE.csproj", "{D0894967-E3A6-40F7-91BF-3F5484CA790A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
@@ -121,6 +125,10 @@ Global
 		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Debug.Build.0 = Debug|.NET
 		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Release.ActiveCfg = Release|.NET
 		{B716AC3B-0370-4C40-AA2A-C45E77091A6D}.Release.Build.0 = Release|.NET
+		{D0894967-E3A6-40F7-91BF-3F5484CA790A}.Debug.ActiveCfg = Debug|.NET
+		{D0894967-E3A6-40F7-91BF-3F5484CA790A}.Debug.Build.0 = Debug|.NET
+		{D0894967-E3A6-40F7-91BF-3F5484CA790A}.Release.ActiveCfg = Release|.NET
+		{D0894967-E3A6-40F7-91BF-3F5484CA790A}.Release.Build.0 = Release|.NET
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection
