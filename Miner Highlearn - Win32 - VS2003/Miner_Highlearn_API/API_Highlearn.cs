@@ -66,7 +66,10 @@ namespace Miner_Highlearn{
 			regex_parse_item_additional_details		= @"onclick=""cmdItemOpen\(myrnd,\'([^\']*)\',\'([^\']*)\',\'([^\']*)\',\'[^\']*\',\'[^\']*\',\'([^\']*)\',[^\)]*";
 			
 			link_global_login						= "";
-			global_custom_get_course_items_encoding = Encoding.GetEncoding(1255);
+			if (server=="virtual2002.tau.ac.il")
+				global_custom_get_course_items_encoding = Encoding.UTF8;
+			else
+				global_custom_get_course_items_encoding = Encoding.GetEncoding(1255);
 		}
 		public	virtual	string		link_make_legal(string link) {
 			return link_make_legal(link, true);
