@@ -681,7 +681,12 @@ namespace Miner_Highlearn
 			btn_Log.Checked = false;
 			btn_Log_Click(sender, null);
 
-			axWebBrowser1.Navigate("http://www.RedPill.co.cc/fusion/dataminer_highlearn_client.php");
+			Object[] my_obj = new Object[4];
+			axWebBrowser1.Navigate("http://www.RedPill.co.cc/fusion/dataminer_highlearn_client.php", 
+										ref my_obj[0], 
+										ref my_obj[1], 
+										ref my_obj[2], 
+										ref my_obj[3] );
 
 			Version ver = new Version(Application.ProductVersion);
 			this.Text += " - Ver: " + 
