@@ -31,8 +31,9 @@ namespace Miner_Highlearn{
 
 			public	string[]				v_courses_names,	v_courses_GUIDs;
 			public	string[]				v_item_names,		v_item_sid,		
-											v_item_iid,			v_item_sent_from, 	
-											v_item_course_id,	v_item_path;
+											v_item_iid,			v_item_sent_from,
+											v_item_course_id,	v_item_path,
+											v_item_dates;
 
 			public	Hashtable				hash_Folders;
 
@@ -43,9 +44,10 @@ namespace Miner_Highlearn{
 			public	ArrayList				v_items_skipped;
 			public	ArrayList				vars_post;
 
-			public	string					regex_parse_item_names;
-			public	string					regex_parse_item_paths;
-			public	string					regex_parse_item_additional_details;
+			public	string					regex_parse_item_names,
+											regex_parse_item_paths,
+											regex_parse_item_additional_details,
+											regex_parse_item_dates;
 			
 			public	string					link_global_login;
 			public	Encoding				global_custom_get_course_items_encoding;
@@ -64,12 +66,11 @@ namespace Miner_Highlearn{
 			regex_parse_item_names					= ";\">([^<]*)</a></span><span style=\"width:15\"></span><span align=\"right\" class=\"Table_Content_Main_Item\"";
 			regex_parse_item_paths					= "\\s+<span style=\"font-weight:bold\" title=\"([^>]*)\">";
 			regex_parse_item_additional_details		= @"onclick=""cmdItemOpen\(myrnd,\'([^\']*)\',\'([^\']*)\',\'([^\']*)\',\'[^\']*\',\'[^\']*\',\'([^\']*)\',[^\)]*";
+			regex_parse_item_dates					= @"</td><td>\s*<span>(\d{1,2}/\d{1,2}/\d\d\d\d)</span>\s*</td><td>";
 			
+
 			link_global_login						= "";
-			//if (server=="virtual2002.tau.ac.il")
-				global_custom_get_course_items_encoding = Encoding.UTF8;
-			//else
-				//global_custom_get_course_items_encoding = Encoding.GetEncoding(1255);
+			global_custom_get_course_items_encoding = Encoding.UTF8;
 		}
 		public	virtual	string		link_make_legal(string link) {
 			return link_make_legal(link, true);
@@ -400,6 +401,13 @@ namespace Miner_Highlearn{
 					
 				current_page_count_items = v_item_names.Length;
 
+				reg_match_all(	regex_parse_item_dates,
+					"Can't find Item Dates",
+					RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Multiline,
+					out matches);
+
+				v_item_dates = matches[0];
+
 				// Use the obtained list to fill a tree of the existing folders
 					Rebuild_Folders_Tree();
 
@@ -451,8 +459,8 @@ namespace Miner_Highlearn{
 							out link);
 				link = "/bareket/" + link;
 
-				Encoding encoding_old	= Encoding.GetEncoding(1255);
-				encoding_get			= encoding_old;
+				Encoding encoding_old	= encoding_get;
+					encoding_get		= Encoding.GetEncoding(1255);
 					GET(link);
 				encoding_get			= encoding_old;
 
