@@ -1,4 +1,4 @@
-#Structure of modules and general principle
+#summary Structure of modules and general principle
 
 = Introduction =
 
@@ -9,7 +9,7 @@ The solution contains: 1 GUI module, 2 general purpose base classes and 11 "cust
 
 = Structure =
 
-== Main GUI - Miner_Highlearn_GUI ==
+== Main GUI - 'Miner_Highlearn_GUI' ==
 This is basically the window and controls that you see on the screen. 
 It uses the customized API_HL_* modules to connect to different servers.
 
