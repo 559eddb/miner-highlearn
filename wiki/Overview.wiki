@@ -7,9 +7,14 @@ The project is for Visual Studio 2003. This means that it *should work* in later
 
 The solution contains: 1 GUI module, 2 general purpose base classes and 11 "customization modules".
 
+Generally, there are only a few tasks that one might want to perform:
+# Fix a module for some university
+# Create a module to support a new university
+# Extend the capabilities of the GUI
+
 = Structure =
 
-== Main GUI - 'Miner_Highlearn_GUI' ==
+== Main GUI - !Miner_Highlearn_GUI ==
 This is basically the window and controls that you see on the screen. 
 It uses the customized API_HL_* modules to connect to different servers.
 
@@ -36,3 +41,5 @@ cmb_Institute.Items.AddRange(
 			  ... 
 			  ...
 }}}
+
+Todo: Fix the design of this process, add each name and combo-box-population to the university class itself.
