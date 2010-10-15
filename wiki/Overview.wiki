@@ -1,0 +1,40 @@
+#Structure of modules and general principle
+
+= Introduction =
+
+Miner-Highlearn is written in C# (Microsoft .NET Framework 1.0)
+The project is for Visual Studio 2003. This means that it *should work* in later versions too, minor adjustments may be needed. If you don't have VS 2003 installed, I suggest trying the version you have first.
+
+The solution contains: 1 GUI module, 2 general purpose base classes and 11 "customization modules".
+
+= Structure =
+
+== Main GUI - Miner_Highlearn_GUI ==
+This is basically the window and controls that you see on the screen. 
+It uses the customized API_HL_* modules to connect to different servers.
+
+To introduce new universities to the GUI, once the API_HL_NEWUNIVERSITY is written, perform the following steps:
+ * Add a reference to the new project at the project-references.
+ * Add the enumeration NewUniversity to the TMy_University enumeration. (frm_Main class)
+{{{
+public	enum	TMy_University {TAU, BIU, BGU, HUJI, Haifa, Colman, HIT, Sapir, CET, Afeka, SCE, NewUniversity};
+}}}
+
+ * Make a new case switch for that university: (function frm_Main::Initialize())
+{{{
+case TMy_University.NewUniversity:
+   hl.core	= (API_Highlearn) new API_HL_NEWUNIVERSITY();
+   break;
+}}}
+
+ * Insert a new row to the combo-box at form's load-time : (function frm_Main::frm_Main_Load(..))
+{{{
+cmb_Institute.Items.AddRange(
+	new TMy_Item_University[] {
+			  new TMy_Item_University(	New University   - new-university.tau.ac.il",
+			  TMy_University.NewUniversity),
+			  ... 
+			  ...
+}}}
+
+
