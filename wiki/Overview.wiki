@@ -85,6 +85,6 @@ namespace Miner_Highlearn {
  * Fixing an existing module - Universities keep updating their Highlearn systems and changing the login procedures / URLs. If your university has its' own module for Miner-Highlearn, it means that at least it used to work in the past and we need to find out what was changed. 
 
  The correct workflow is to launch your browser and perform a manual login to your Highlearn-server. Then you should look at the HTTP-TCP flow and compare it to the automated one that Miner-Highlearn peforms. This means that you'll need a packet sniffer / analyzer. To name a few:
- # IE HTTP Analyzer
- # Wireshark
- # Ethereal
+  # IE HTTP Analyzer
+  # Wireshark
+  # Ethereal
