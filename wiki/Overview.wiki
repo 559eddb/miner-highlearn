@@ -55,7 +55,7 @@ A University-module is a .NET DLL with code that describes the differences betwe
 * The easy way to begin writing a new module, is check the existing modules, go to their websites and find the one that looks as similar as possible to your own. Then copy & paste the project, don't forget the dependencies. Now update the URLs as done in the other modules, and let the debugging begin.
 
  * A simple example:
-  To add support for the Bar-Ilan University, all the code needed was:
+ To add support for the Bar-Ilan University, all the code needed was:
 {{{
 using System;
 
@@ -82,4 +82,4 @@ namespace Miner_Highlearn {
 			...
 }}}
 
-* Fixing an existing module - Universities keep updating their Highlearn systems and changing the login procedures / URLs. If your university has its' own module for Miner-Highlearn, it means that at least it used to work in the past and we need to find out what has changed. 
+ * Fixing an existing module - Universities keep updating their Highlearn systems and changing the login procedures / URLs. If your university has its' own module for Miner-Highlearn, it means that at least it used to work in the past and we need to find out what has changed. 
