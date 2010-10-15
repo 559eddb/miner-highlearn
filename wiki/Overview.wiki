@@ -12,6 +12,11 @@ Generally, there are only a few tasks that one might want to perform:
 # Create a module to support a new university
 # Extend the capabilities of the GUI
 
+The skills that are needed to contribute to the Miner-Highlearn project are:
+* C# programming language.
+* HTTP protocol basics - GET POST ...
+* Regular Expressions - to parse the html that the Highlearn server sends.
+
 = Structure =
 
 == Main GUI - !Miner_Highlearn_GUI ==
@@ -43,3 +48,38 @@ cmb_Institute.Items.AddRange(
 }}}
 
 Todo: Fix the design of this process, add each name and combo-box-population to the university class itself.
+
+== Custom university modules ==
+A University-module is a .NET DLL with code that describes the differences between the base Miner_Highlearn_API module and the specific university.
+
+* The easy way to begin writing a new module, is check the existing modules, go to their websites and find the one that looks as similar as possible to your own. Then copy & paste the project, don't forget the dependencies. Now update the URLs as done in the other modules, and let the debugging begin.
+
+ * A simple example:
+  To add support for the Bar-Ilan University, all the code needed was:
+{{{
+using System;
+
+namespace Miner_Highlearn {
+	public class API_HL_BIU : API_Highlearn {
+		public API_HL_BIU() : base("hl2.biu.ac.il") {
+			link_global_login = "http://hl2.biu.ac.il/sso/login2.asp";
+		}
+	}
+}
+}}}
+ This code states the server URL using the API_Highlearn constructor ("hl2.biu.ac.il"), and the link_global_login - that is the URL for the login-form submission - they tend to differ from place to place, http / https etc.
+ The Bar-Ilan highlearn system has recently been updated, and it's login method is no longer the standard Highlearn login, so to fix this module, now the Miner_Highlearn_API::Login(...) function needs to be overridden, and perform automatically whatever the user's browser needs to perform in order to login. This was the case with the Haifa-University (check out API_HL_HAIFA for the complete example):
+{{{
+		public	override	void		Login(string username, string password) {
+			logger.Log_Method(username, "*****");
+			logger.Step_In();
+
+			string match = null;
+
+			// link_global_login - set from the constructor
+			...
+			...
+			...
+}}}
+
+* Fixing an existing module - Universities keep updating their Highlearn systems and changing the login procedures / URLs. If your university has its' own module for Miner-Highlearn, it means that at least it used to work in the past and we need to find out what has changed. 
