@@ -52,7 +52,7 @@ Todo: Fix the design of this process, add each name and combo-box-population to 
 == Custom university modules ==
 A University-module is a .NET DLL with code that describes the differences between the base Miner_Highlearn_API module and the specific university.
 
-* The easy way to begin writing a new module, is check the existing modules, go to their websites and find the one that looks as similar as possible to your own. Then copy & paste the project, don't forget the dependencies. Now update the URLs as done in the other modules, and let the debugging begin.
+ * The easy way to begin writing a new module, is check the existing modules, go to their websites and find the one that looks as similar as possible to your own. Then copy & paste the project, don't forget the dependencies. Now update the URLs as done in the other modules, and let the debugging begin.
 
  * A simple example:
  To add support for the Bar-Ilan University, all the code needed was:
